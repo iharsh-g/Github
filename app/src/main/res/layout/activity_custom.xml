@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#1E1E1E">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/activity_custom_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@drawable/tab_background"
+        app:popupTheme="@style/Theme.MaterialComponents.DayNight.DarkActionBar">
+
+        <ImageView
+            android:id="@+id/activity_custom_back_iv"
+            android:layout_width="20dp"
+            android:layout_height="25dp"
+            android:layout_marginEnd="5dp"
+            android:background="?selectableItemBackgroundBorderless"
+            android:src="@drawable/ic_back" />
+
+        <TextView
+            android:id="@+id/activity_custom_action_bar_name_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:background="?selectableItemBackgroundBorderless"
+            android:padding="5dp"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            tools:text="Harsh" />
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/activity_custom_tabs"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:layout_below="@id/activity_custom_toolbar"
+        android:background="#1E1E1E"
+        android:paddingBottom="2dp"
+        app:tabGravity="fill"
+        app:tabIndicatorColor="@color/white"
+        app:tabMaxWidth="0dp"
+        app:tabSelectedTextColor="@color/white"
+        app:tabTextColor="#A8A19E" />
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/activity_custom_viewPager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/activity_custom_tabs"
+        android:background="#1E1E1E" />
+
+</RelativeLayout>

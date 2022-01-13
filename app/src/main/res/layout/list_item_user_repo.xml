@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="2.5dp">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="10dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/gradient_2">
+
+            <RelativeLayout
+                android:id="@+id/user_repo_rl"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="?selectableItemBackground"
+                android:padding="10dp">
+
+                <TextView
+                    android:id="@+id/user_repo_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_toStartOf="@id/user_repo_url"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:padding="5dp"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    tools:text="AnyTimeWeather" />
+
+                <ImageView
+                    android:id="@+id/user_repo_url"
+                    android:layout_width="40dp"
+                    android:layout_height="30dp"
+                    android:layout_alignParentEnd="true"
+                    android:background="?selectableItemBackgroundBorderless"
+                    android:src="@drawable/ic_open_in_browser" />
+
+                <View
+                    android:id="@+id/user_repo_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@id/user_repo_name"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@color/black" />
+
+                <TextView
+                    android:id="@+id/user_repo_desc"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/user_repo_view"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:ellipsize="end"
+                    android:maxLines="3"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"
+                    android:fontFamily="times"
+                    tools:text="Any Time Weather is an android weather app that provides weather and weather forecast of three days with hourly report. It includes search functionality and stores favorite locations. User can use those location to see the weather. It also provides notification on user preference and having a widget to shows the user preferred location." />
+
+                <TextView
+                    android:id="@+id/user_repo_lang"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/user_repo_desc"
+                    android:paddingStart="1dp"
+                    android:paddingEnd="5dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="10dp"
+                    android:textColor="#BC0909"
+                    android:textStyle="italic"
+                    tools:text="Javadsds" />
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>

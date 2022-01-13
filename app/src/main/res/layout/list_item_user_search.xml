@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="2.5dp">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="10dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/gradient_1">
+
+            <RelativeLayout
+                android:id="@+id/user_search_detailsRl"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="?selectableItemBackground"
+                android:padding="10dp">
+
+                <com.mikhaellopez.circularimageview.CircularImageView
+                    android:id="@+id/user_search_civ"
+                    android:layout_width="130dp"
+                    android:layout_height="130dp"
+                    android:src="@mipmap/ic_launcher"
+                    app:civ_border_color="@color/white"
+                    app:civ_border_width="4dp"
+                    app:civ_shadow="true"
+                    app:civ_shadow_color="@color/white"
+                    app:civ_shadow_radius="10dp" />
+
+                <ImageView
+                    android:id="@+id/user_search_logo_iv"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_alignParentEnd="true"
+                    android:background="?selectableItemBackgroundBorderless"
+                    android:src="@drawable/github_logo" />
+
+                <TextView
+                    android:id="@+id/user_search_name_tv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="10dp"
+                    android:layout_toEndOf="@id/user_search_civ"
+                    android:textColor="@color/white"
+                    android:textSize="18sp"
+                    android:fontFamily="times new roman"
+                    tools:text="Harsh" />
+
+            </RelativeLayout>
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>
